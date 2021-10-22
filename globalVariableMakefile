@@ -1,0 +1,12 @@
+# define your global variable you need in this file #
+
+CC := gcc
+
+# gcc flag
+CFLAGS := -Wall -O3 -I../include
+Libs = -lpthread
+Target := # your project final executable filename #
+Source := $(wildcard ./*.c)
+Objs := $(patsubst %.c,%.o,$(Source))
+Modules += # your sub directories name of %.c file #
+AllObjs := $(addsuffix /*.o,$(Modules))
